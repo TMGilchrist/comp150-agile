@@ -1,7 +1,17 @@
-\documentclass{article}
+\documentclass{scrartcl}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{setspace}
+% \doublespace <------ disabled while writing. Reenable once done!!!
+\usepackage{amsmath}
+
+\usepackage{url}
+\usepackage{graphicx}
 
 \title{Challenges when scaling the Agile Methodology and how to Overcome them}
-\date{2017-11-11}
+\subtitle{COMP150 - Agile Development Practice}
+\date{2017-11-16}
 \author{1604281}
 
 \begin{document}
@@ -14,7 +24,9 @@
 
 \section{Introduction}
 
-Agile development methodologies are gaining popularity in the software industry, (FIND REF) and are already used by many companies. However, Agile Software Development is not without its drawbacks. One of the most common criticisms of the agile methodology \cite{begel2007usage} is the difficulties encountered when up-scaling the size of Agile projects. Although this paper is addressing general Agile practices and problems, the Agile methodology is also used in the games industry (FIND REF) which can range from small independent studios to massive teams working on multiple pieces of software. As such, the potential to scale Agile development to suit the nature of the game development environment could be beneficial to the games industry. 
+Agile development methodologies are gaining popularity in the software industry, (FIND REF) and are already used by many companies. However, Agile Software Development is not without its drawbacks. One of the most common criticisms of the agile methodology \cite{begel2007usage} is the difficulties encountered when up-scaling the size of Agile projects.
+
+Although this paper is addressing general Agile practices and problems, the Agile methodology is also used in the games industry (FIND REF) which can range from small independent studios to massive teams working on multiple pieces of software. It has even been shown that many games development companies who do not intent to use Agile development still implement many of its core practices \cite{petrillo2010agility} and as such, the potential to scale Agile development to suit the nature of the game development environment could be beneficial to the games industry as a whole. 
 
 \section{Challenges}
 
@@ -22,7 +34,7 @@ Though there are many issues involved in scaling an Agile project \cite{turk2014
 
 \paragraph{Project Complexity}\mbox{}\newline
 
-As a project becomes larger and more complex, several issues arise when approaching it with the Agile methodology. Firstly, the Agile principle of ``Welcome changing requirements, even late in development." (REF), while feasible to implement in a small project, becomes increasingly difficult as the software becomes more complex. For example, if a project has many constituent parts which each have many dependencies on each other, changing one aspect of the project late in development may cause problems in other parts of the project. This can be compounded by another aspect of project complexity - mixing of Agile and Non-Agile teams. \\
+As a project becomes larger and more complex, several issues arise when approaching it with the Agile methodology. Firstly, the Agile principle of ``Welcome changing requirements, even late in development." \cite{AgileManifesto}, while feasible to implement in a small project, becomes increasingly difficult as the software becomes more complex. For example, if a project has many constituent parts which each have many dependencies on each other, changing one aspect of the project late in development may cause problems in other parts of the project. This can be compounded by another aspect of project complexity - mixing of Agile and Non-Agile teams.
 
 A large project will inevitably have multiple teams working on different aspects of it concurrently, often leading to both Agile and Non-Agile groups collaborating. This can cause clashes in design approach and lead to some groups not fully understanding the design of the project. 
 
@@ -30,18 +42,46 @@ A large project will inevitably have multiple teams working on different aspects
 
 \paragraph{Team Size}\mbox{}\newline
 
-Team size issues go here
+Similar issues exist regarding larger team sizes, particularly when regarding communication. Communication is key to any development project but it is given special focus in an agile context. \cite{stoica2013software} As teams become larger, usually when consisting of over fifteen people, \cite{ambler2009agile} communication within the team can break down, as Scrum meetings become unwieldy and long winded, wasting time that could be spent working.
 
 \section{Solutions}
+
+There have been numerous proposed solutions to the difficulties of scaling Agile, however this paper will be focusing on just three of them. 
+
+\paragraph{Scrum of Scrums}\mbox{}\newline
+
+The Scrum of Scrums is a common method for dealing with large Agile teams which enhances the standard Scrum model. Large teams are divided into smaller ones and an Ambassador is appointed for each. Individual teams conduct normal Scrum meeting, while the Ambassadors meet for a Scrum of Scrums where they relay important issues discussed in their teams' scrums.
+
+Analyse
+
+\paragraph{Lean Governance}\mbox{}\newline
+
+
+
+\paragraph{Multiple Backlogs}\mbox{}\newline
+
+The Nokia Corporation took an interesting approach on one of their projects, utilising four different types of backlog to organise tasks across multiple teams. \cite{laanti2008implementing}
+
+As shown in Figure \ref{fig:backlogs}, the system they developed consisted of two program level backlogs and two at team level. The Program Content backlog contained all features for the project, while the Program Backlogs contained features only for a single release. This simple division alone helps to prioritise features of a broad, complex project and makes it clear what needs to be worked on for each release. 
+
+Nokia also divided their development team into multiple smaller teams, following a Scrum of Scrums method. However, in addition to this, each small team had an individual Team Backlog consisting of user stories for that team to work on, as well as a Sprint Backlog to keep track of the tasks being worked on during a sprint. 
+	
+\begin{figure}
+	\includegraphics[width=\linewidth]{"Nokia Multiple Backlogs".png}
+	\caption{Backlog Structure: Taken from \cite[p. ~1384]{laanti2008implementing}}
+	\label{fig:backlogs}
+\end{figure}
+
+
+\section{Analysis and Comparison}
+
 
 
 \section{Conclusion}
 
 
-
-%%\nocite{*}
 \bibliography{references}
-\bibliographystyle{ieeetr}
+\bibliographystyle{ieeetran}
 
 
 \end{document}
